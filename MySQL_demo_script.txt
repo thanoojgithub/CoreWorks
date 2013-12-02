@@ -1,0 +1,36 @@
+mysql> use mydb;
+Database changed
+mysql> show tables;
+Empty set (0.00 sec)
+
+mysql> create table dept (did int primary key, dname varchar(45), dloc varchar(4
+5));
+Query OK, 0 rows affected (0.08 sec)
+
+mysql> create table employee (eid int primary key, ename varchar(45), edept int, FOREIGN KEY(edept) REFERENCES dept(did));
+Query OK, 0 rows affected (0.07 sec)
+
+mysql>
+
+
+mysql> create table emp (eid int primary key, ename varchar(45));
+Query OK, 0 rows affected (0.08 sec)
+
+mysql> insert emp values (1,'sriram');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert emp values (2,'seeta');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from emp;
++-----+--------+
+| eid | ename  |
++-----+--------+
+|   1 | sriram |
+|   2 | seeta  |
++-----+--------+
+2 rows in set (0.00 sec)
+
+mysql> commit;
+Query OK, 0 rows affected (0.02 sec)
+
