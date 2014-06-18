@@ -34,3 +34,4 @@ mysql> select * from emp;
 mysql> commit;
 Query OK, 0 rows affected (0.02 sec)
 
+Hi
